@@ -1,6 +1,6 @@
 from django.db import models
-from . Round import Round
-from . Student import Student
+from pursuit_app.models.Round import Round
+from pursuit_app.models.Student import Student
 
 class Interview(models.Model) :
 

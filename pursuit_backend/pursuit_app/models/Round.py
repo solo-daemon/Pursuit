@@ -1,5 +1,5 @@
 from django.db import models
-from . Season import Season
+from pursuit_app.models.Season import Season
 
 class Round(models.Model) :
 

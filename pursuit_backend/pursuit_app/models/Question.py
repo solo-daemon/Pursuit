@@ -1,6 +1,6 @@
 from django.db import models
-from . Section import Section
-from . Img_Member import Img_Member
+from pursuit_app.models.Section import Section
+from pursuit_app.models.Img_Member import Img_Member
 
 class Question( models.Model ) : 
 

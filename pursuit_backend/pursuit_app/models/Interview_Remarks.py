@@ -1,6 +1,6 @@
 from django.db import models
-from . Interview import Interview
-from . Section import Section
+from pursuit_app.models.Interview import Interview
+from pursuit_app.models.Section import Section
 
 class Interview_Remarks( models.Model ) :
          

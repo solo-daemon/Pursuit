@@ -1,5 +1,5 @@
 from django.db import models
-from . Round import Round
+from pursuit_app.models.Round import Round
 
 class Section( models.Model ) :
 

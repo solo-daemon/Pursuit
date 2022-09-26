@@ -1,6 +1,6 @@
 from django.db import models
-from . Interview import Interview
-from . Img_Member import Img_Member
+from pursuit_app.models.Interview import Interview
+from pursuit_app.models.Img_Member import Img_Member
 
 class Interview_Panel(models.Model) :
 

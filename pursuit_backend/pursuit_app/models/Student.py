@@ -1,6 +1,6 @@
 from django.db import models
-from . Season import Season
-from . Round import Round
+from pursuit_app.models.Season import Season
+from pursuit_app.models.Round import Round
 
 class Student ( models.Model ) :
     

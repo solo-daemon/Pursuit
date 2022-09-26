@@ -1,6 +1,6 @@
 from django.db import models
-from . Student import Student
-from . Question import Question
+from pursuit_app.models.Student import Student
+from pursuit_app.models.Question import Question
     
 class Scores(models.Model) :
 

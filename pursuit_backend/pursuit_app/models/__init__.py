@@ -1,4 +1,3 @@
-
 from pursuit_app.models.Score import Scores
 from pursuit_app.models.Round import Round
 from pursuit_app.models.Season import Season
@@ -9,6 +8,7 @@ from pursuit_app.models.Question import Question
 from pursuit_app.models.Interview import Interview
 from pursuit_app.models.Interview_Panel import Interview_Panel
 from pursuit_app.models.Interview_Remarks import Interview_Remarks
+from pursuit_app.models.Interview_Marks import Interview_Marks
 
 #  checker in question is an issue
 # max_length of some fields
