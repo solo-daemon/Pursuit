@@ -10,5 +10,5 @@ class ScoreViewSet(viewsets.ModelViewSet) :
 
     serializer_class = ScoreSerializer
     queryset  =  Scores.objects.all()
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [SessionAuthentication ,]
+    # permission_classes = [IsAuthenticated]
+    # authentication_classes = [SessionAuthentication ,]

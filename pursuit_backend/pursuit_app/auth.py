@@ -4,7 +4,7 @@ from pursuit_app.models import Img_Member
 class UserBackend(backends.ModelBackend) :
 
 
-    def authenticate(self , request , user_json , ) :
+    def authenticate( request , user_json , ) :
         if user_json is not None :
             return "not found anything"
         try :

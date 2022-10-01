@@ -7,5 +7,5 @@ from pursuit_app.serializers import Interview_PanelSerializer
 class Interview_PanelViewSet(viewsets.ModelViewSet) :
     queryset = Interview_Panel.objects.all()
     serializer_class = Interview_PanelSerializer
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [SessionAuthentication ,]
+    # permission_classes = [IsAuthenticated]
+    # authentication_classes = [SessionAuthentication ,]

@@ -4,5 +4,5 @@ from pursuit_app.models import Season
 class SeasonSerializer (serializers.ModelSerializer) :
 
     class Meta :
-        models = Season
+        model = Season
         fields = '__all__'

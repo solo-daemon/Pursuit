@@ -8,5 +8,5 @@ class QuestionViewSet(viewsets.ModelViewSet) :
 
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [SessionAuthentication ,]
+    # permission_classes = [IsAuthenticated]
+    # authentication_classes = [SessionAuthentication ,]

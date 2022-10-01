@@ -7,7 +7,7 @@ from pursuit_app.serializers import RoundSerializer
 class RoundViewSet(viewsets.ModelViewSet) :
     queryset = Round.objects.all()
     serializer_class = RoundSerializer
-    permission_classes = [IsAuthenticated ,]
-    authentication_classes = [SessionAuthentication ,]
+    # permission_classes = [IsAuthenticated ,]
+    # authentication_classes = [SessionAuthentication ,]
 
     

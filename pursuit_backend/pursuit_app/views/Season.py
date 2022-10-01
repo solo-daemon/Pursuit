@@ -7,6 +7,6 @@ from pursuit_app.serializers import SeasonSerializer
 class SeasonViewSet(viewsets.ModelViewSet) :
     queryset = Season.objects.all()
     serializer_class = SeasonSerializer
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [SessionAuthentication ,]
+    # permission_classes = [IsAuthenticated]
+    # authentication_classes = [SessionAuthentication ,]
 

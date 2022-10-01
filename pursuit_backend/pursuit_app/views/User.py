@@ -6,7 +6,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated , AllowAny
 from rest_framework.authentication import SessionAuthentication
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth import login, logout
 from pursuit_app.serializers import UserSerializer
 from pursuit_app.models import Img_Member
 from pursuit_app.auth import UserBackend
@@ -129,7 +129,7 @@ class UserViewSet(viewsets.ModelViewSet) :
         #             status = status.HTTP_202_ACCEPTED ,
         #         )
 
-        user_ = authenticate(request , user_json = user_data ,  backend='pursuit_app.auth.UserBackend')
+        user_ = UserBackend.authenticate(request=request , user_json = user_data )
         login(request , user=user_ , backend='pursuit_app.auth.UserBackend')
         
         # fields_changed = False

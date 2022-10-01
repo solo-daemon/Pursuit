@@ -6,6 +6,7 @@ router=routers.DefaultRouter()
 router.register(r'user',UserViewSet)
 router.register(r'student',StudentViewSet)
 router.register(r'question',QuestionViewSet)
+router.register(r'season',SeasonViewSet)
 
 app_name = 'pursuit_app'
 urlpatterns = router.urls
