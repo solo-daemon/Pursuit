@@ -3,7 +3,7 @@ from rest_framework import serializers
 from pursuit_app.models import Student
 class StudentSerializer(serializers.ModelSerializer) :
 
-
+    # question = 
     
     class Meta :
         model = Student

@@ -46,11 +46,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'pursuit_app.apps.PursuitAppConfig',
+    'pursuit_app',
     'django_filters' ,
     'corsheaders' ,
     'channels' ,
-
+    'rest_framework.authtoken' ,
 ]
 
 MIDDLEWARE = [
@@ -69,7 +69,7 @@ ROOT_URLCONF = 'pursuit_backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR , 'build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -151,12 +151,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
-        'rest_framework.permissions.AllowAny',
+        'rest_framework.permissions.IsAuthenticated' ,
     ] ,
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        # 'rest_framework.authentication.BasicAuthentication',
-        'rest_framework.authentication.SessionAuthentication',
+         'rest_framework.authentication.TokenAuthentication' ,
     ]
 }
 
 ASGI_APPLICATION = "pursuit_backend.asgi.application"
+CORS_ORIGINS_ALLOW_ALL = True
