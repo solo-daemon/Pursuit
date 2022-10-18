@@ -8,4 +8,4 @@ class Question( models.Model ) :
     sections = models.ForeignKey( Section , on_delete = models.CASCADE , )
     maximum_score = models.PositiveIntegerField( 'maximum score' )
     # checker = there can be multiple checker for the same question
-    checker = models.ManyToManyField(Img_Member ,)
+    # checker = models.ManyToManyField(Img_Member ,)

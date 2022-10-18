@@ -8,12 +8,13 @@ from pursuit_app.models.Student import Student
 class StudentViewSet(viewsets.ModelViewSet) :
     serializer_class = StudentSerializer
     queryset = Student.objects.all()
-    permission_classes = [IsAuthenticated]
-    authentication_classes = [SessionAuthentication ,]
+    # permission_classes = [IsAuthenticated]
+    # authentication_classes = [SessionAuthentication ,]
 
-    @action(detail=True, 
-    methods=['list'] ,
-    url_path='dashboard' ,
-    url_name='dashboard' ,)
-    def dashboard(self , request) :
-        pass
+    # @action(detail=True, 
+    # methods=['list'] ,
+    # url_path='dashboard' ,
+    # url_name='dashboard' ,
+    # detail=True,)
+    # def dashboard(self , request) :
+    #     pass;

@@ -16,8 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.urls import include
-
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
+# from pursuit_app.views import TokenObtainPairWithoutPasswordView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('pursuit_app/' , include('pursuit_app.urls')),
+    # path('api/token/', TokenObtainPairWithoutPasswordView.as_view(), name='token_obtain_pair'),
+    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+
 ]
