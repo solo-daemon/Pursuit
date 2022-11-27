@@ -24,7 +24,4 @@ from rest_framework_simplejwt.views import (
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('pursuit_app/' , include('pursuit_app.urls')),
-    # path('api/token/', TokenObtainPairWithoutPasswordView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-
 ]

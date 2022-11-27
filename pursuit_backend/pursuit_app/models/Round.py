@@ -14,4 +14,7 @@ class Round(models.Model) :
 
     round_name = models.CharField( 'round name' , max_length = 255 , )
     round_type = models.CharField( 'round type' , max_length = 1 , choices = ROUND_TYPE,default=INTERVIEW , )
-    season = models.ForeignKey( Season,on_delete = models.CASCADE , )
+    season = models.ForeignKey( Season,on_delete = models.CASCADE , related_name='rounds')
+
+    def __str__(self) :
+        return self.round_name

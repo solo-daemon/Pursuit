@@ -9,7 +9,4 @@ from pursuit_app.models.Interview import Interview
 from pursuit_app.models.Interview_Panel import Interview_Panel
 from pursuit_app.models.Interview_Remarks import Interview_Remarks
 from pursuit_app.models.Interview_Marks import Interview_Marks
-
-#  checker in question is an issue
-# max_length of some fields
-# img_member not sorted yet
+from pursuit_app.models.Interview_Section import Interview_Section

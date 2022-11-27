@@ -8,3 +8,7 @@ class Scores(models.Model) :
     question = models.ForeignKey ( Question , on_delete = models.CASCADE , )
     score = models.PositiveIntegerField( 'score' , )
     remark = models.TextField( 'remark' ,)
+
+    def __str__(self) :
+        return str(self.id) 
+    

@@ -104,7 +104,10 @@ class UserViewSet(viewsets.ModelViewSet) :
         if user_ is not None :
             login(request,user_)
             token = Token.objects.get_or_create(user=user_)
-            return HttpResponseRedirect(redirect_to='http://localhost:3000/?token='+str(token[0]))
+            # res = Response(status=status.HTTP_202_ACCEPTED)
+            # res['Access-Control-Allow-Origin']='http://localhost:3000'
+            # res['Access-Control-Allow-Credentials']='true'
+            return HttpResponseRedirect(redirect_to='http://localhost:3000/oauth_jump/?token='+str(token[0]))
         else :
             return Response (
                 {

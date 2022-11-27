@@ -1,8 +1,9 @@
 from rest_framework import serializers
-from pursuit_app.models import Img_Member
+from django.contrib.auth import get_user_model
 
+User = get_user_model()
 class UserSerializer(serializers.ModelSerializer) :
 
     class Meta :
-        model = Img_Member
+        model = User
         fields = '__all__'

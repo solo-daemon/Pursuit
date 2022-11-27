@@ -9,4 +9,4 @@ from pursuit_app.views.Round import RoundViewSet
 from pursuit_app.views.Interview_Marks import Interview_MarksViewSet
 from pursuit_app.views.Interview_Panel import Interview_PanelViewSet
 from pursuit_app.views.Interview_Remarks import Interview_RemarksViewSet
-# from pursuit_app.views.jwt import TokenObtainPairWithoutPasswordView
+from pursuit_app.views.Interview_Section import Interview_SectionViewSet

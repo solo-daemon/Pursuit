@@ -10,7 +10,7 @@ class UserBackend(backends.ModelBackend) :
             raise ValueError("user has not been provided")
         User = get_user_model()
         print("hello")
-        print(User)
+        print(user_json)
         try :
             existing_user = User.objects.get(
                 enrollment_no = user_json["username"]
