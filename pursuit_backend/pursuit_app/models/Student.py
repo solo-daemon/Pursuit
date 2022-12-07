@@ -31,5 +31,7 @@ class Student ( models.Model ) :
     email = models.EmailField( max_length=254 , null=True)
     selection_status = models.CharField('selection status' , choices = SELECTION_STATUS , default = PENDING , max_length=1)
 
+    
+
     def __str__(self) :
         return str(self.enrollment_no)

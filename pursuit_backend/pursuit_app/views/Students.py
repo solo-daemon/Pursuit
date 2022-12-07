@@ -4,6 +4,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import SessionAuthentication
 from pursuit_app.serializers.Student import StudentSerializer
 from pursuit_app.models.Student import Student
+from pursuit_app.serializers import StudentInterviewDashboardSerializer
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
@@ -13,13 +14,12 @@ class StudentViewSet(viewsets.ModelViewSet) :
 
     @action(
         methods=['GET' ,] ,
-        detail = False ,
-        url_name = 'season-wise' ,
-        url_path = r'season_wise/(?P<season_id>[0-9]+)/' ,
+        detail = True ,
+        name='interview_dashboard',
     )
-    def Dashboard(self,request,**kwargs) : 
-        data = Student.objects.all()
-        data_serialized = StudentSerializer(data,many=True)
+    def interview_dashboard(self,request,pk) : 
+        data = Student.objects.filter(status=pk)
+        data_serialized = StudentInterviewDashboardSerializer(data,many=True)
         return Response(data_serialized.data)
 
        

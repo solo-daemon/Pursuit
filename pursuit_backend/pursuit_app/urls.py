@@ -17,7 +17,7 @@ router.register(r'interview_remarks',Interview_RemarksViewSet,"interview-remarks
 router.register(r'interview_marks',Interview_MarksViewSet,"interview-marks")
 router.register(r'interview_panel',Interview_PanelViewSet,"interview-panel")
 router.register(r'score',ScoreViewSet,"score")
-router.register(r'interview_section',Interview_SectionViewSet,"interview-section")
+# router.register(r'interview_section',Interview_SectionViewSet,"interview-section")
 
 app_name = 'pursuit_app'
 urlpatterns =router.urls 
